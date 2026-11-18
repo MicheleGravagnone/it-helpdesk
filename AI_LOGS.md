@@ -633,19 +633,6 @@ Review ONLY this specific section of our SupportIT Vision Document (university I
 
 7. Does the paragraph describe a problem that affects the university as a whole, or are the stated challenges limited to specific departments, support teams, or groups of users?
 
-*Team decisions*
-Q1: Confirmed per the project brief—there is currently no unified, university-wide channel for submitting and tracking IT support requests.
-
-Q2 & Q5: Unlogged requests, inconsistent categorization, unclear prioritization, ambiguous ownership, and lack of status visibility are assumed operational consequences of relying on informal, fragmented channels (email, phone, walk-ins) rather than formally audited metrics.
-
-Q3: We will replace "IT issues" with "IT support requests" to match the project brief and cover both technical incidents (faults) and standard service/access requests.
-
-Q4: Both, as the problem stems from the combination of fragmented intake channels and the absence of standardized support workflows (categorization, prioritization, assignment, escalation, and closure).
-
-Q6: We will clarify this at a business level to mean there is currently no consistent mechanism to confirm resolution with the requester or collect post-resolution feedback before closing a request.
-
-Q7: The paragraph is ramed as a general university-wide challenge affecting students and university staff across campus.
-
 ---
 ---
 
@@ -676,3 +663,83 @@ Currently, students and university staff lack a single, structured channel for s
 6. Is **"IT support requests"** intended to cover all support-related interactions handled by university IT services, or only a subset of support issues? The scope of the problem domain is not fully explicit.
 
 7. Has it been established that IT staff currently struggle to **coordinate workloads, prevent duplicate efforts, and consistently confirm resolution**, or are these anticipated risks that the project aims to mitigate?
+
+# Team Decisions
+Copilot is asking empirical questions without pointing out reasoning flaws, hence the proposed solution is satisfactory.
+
+---
+---
+
+**Prompt**
+Review ONLY this specific section of our SupportIT Vision Document (university IT helpdesk for students and staff; out of scope: remote control, automatic diagnosis, monitoring platforms; no UI or tech choices). Check ONLY for: ambiguous terms, unverified current-state assumptions, contradictions, or scope drift within this section's high-level purpose. - Do NOT ask detailed functional requirement questions (e.g., workflows, fields, permissions, UI, or edge cases) that belong in later sections.- Do NOT rewrite the text. - Return a maximum of 5–7 high-level clarification questions strictly relevant to this section.
+
+3. Project Stakeholders3.1 Definition of the stakeholders of the idea and their benefitsSupportIT serves two primary groups: **requesters** who rely on university IT services and **support personnel** who manage and resolve requests, alongside **institutional governance stakeholders** who oversee service quality and project delivery.- **Students:** Benefit from a single, accessible channel to report IT issues or request services, real-time visibility into request status, clear communication with technicians, and an opportunity to confirm resolution and provide feedback.- **University Staff (Academic & Administrative):** Benefit from streamlined request submission, predictable prioritization for teaching and operational needs, transparent progress tracking, and reduced follow-up effort.- **IT Support Personnel (Technicians / Agents):** Benefit from a unified request queue, clear categorization and ownership, structured communication history, and defined escalation paths that reduce duplicate work and ambiguity.- **IT Service Supervisors / Helpdesk Leads:** Benefit from operational visibility into request volumes, assignment distribution, overdue or escalated tickets, and post-resolution feedback to monitor service quality.- **University Leadership & Project Sponsors:** Benefit from standardized support governance, clearer accountability across campus IT operations, and alignment with institutional service expectations without expanding into infrastructure monitoring tools.3.2 Stakeholder Summary| Name | Description | Responsibilities || :--- | :--- | :--- || **Student Requester** | Enrolled university students using campus IT services and digital resources. | Submits IT support requests, provides necessary issue details, responds to technician inquiries, confirms resolution, and submits feedback. || **Staff Requester** | Academic, research, and administrative university employees relying on IT systems for teaching and operations. | Submits IT support requests, provides relevant context/urgency details, communicates with assigned support staff, confirms closure, and provides feedback. || **IT Support Technician** | Frontline and specialized IT personnel responsible for investigating and resolving support requests. | Reviews, categorizes, and prioritizes incoming requests (as defined by workflow rules), claims or accepts assigned tickets, communicates progress, escalates unresolved issues, and documents closure. || **IT Service Supervisor** | Team lead or helpdesk manager overseeing daily IT support operations and service standards. | Monitors queue workloads, manages ticket assignment and escalations, enforces priority and SLA guidelines, reviews user feedback, and ensures workflow consistency. || **Project Sponsor / University Leadership** | Institutional decision-makers funding and authorizing the SupportIT initiative. | Approves project scope and governance policies, allocates resources, defines high-level service priorities, and validates alignment with university objectives. |
+
+*Answer*
+# High-Level Clarification Questions
+
+1. The section groups stakeholders into **requesters**, **support personnel**, and **institutional governance stakeholders**. Has it been confirmed that these categories fully represent all stakeholder interests relevant to the vision, or are they intended as a simplified grouping for presentation purposes?
+
+2. The benefits listed for each stakeholder assume improvements such as **real-time visibility**, **predictable prioritization**, **operational visibility**, and **clearer accountability**. Are these validated stakeholder needs, or inferred benefits derived from the proposed solution?
+
+3. The stakeholder responsibilities include activities such as **confirming resolution**, **providing feedback**, and **responding to technician inquiries**. Are these established expectations of stakeholder participation, or are they assumptions about how stakeholders will engage with the future system?
+
+4. The description of **University Leadership & Project Sponsors** includes benefits related to governance and accountability. Is their interest primarily operational service oversight, project sponsorship, or both? The current wording appears to combine governance and project-level concerns.
+
+5. The **IT Support Technician** responsibilities reference prioritization, categorization, assignment, and escalation activities. Is it assumed that all technicians will participate in these activities, or could these responsibilities vary across different support roles within the university?
+
+6. The **IT Service Supervisor** responsibilities mention enforcing **SLA guidelines**, but SLA management has not been established elsewhere in the provided vision excerpts. Is SLA governance a confirmed part of the project's high-level vision, or does this introduce a concept not previously defined?
+
+7. The benefit statement for **University Leadership & Project Sponsors** explicitly references infrastructure monitoring exclusions. Since this section's purpose is stakeholder identification and benefits, does referencing scope exclusions here risk mixing stakeholder concerns with scope-definition content?
+
+
+# Team Decisions
+
+- **Q1 (Completeness of Stakeholder Categories):** Intended as the primary stakeholder grouping derived from the project brief (requesters, support personnel, and institutional sponsors/leadership).
+- **Q2 (Validated vs. Inferred Benefits):** These represent intended value outcomes derived from the project brief's objectives rather than metrics from formal stakeholder surveys. Framed in the text as *expected* or *intended* benefits until validated with users.
+- **Q3 (Requester Responsibilities):** Responding to inquiries, confirming resolution, and providing feedback represent expected user participation required to resolve the project brief's communication, closure, and feedback questions—not yet backed by binding institutional policy.
+- **Q4 (University Leadership vs. Project Sponsors):** Separated their concerns more clearly: Project Sponsors focus on funding, scope approval, and project delivery, while University Leadership focuses on institutional service governance and alignment.
+- **Q5 (Technician Role Variations):** Acknowledged that specific permissions across support tiers (e.g., who sets final priority or assigns tickets) remain to be defined in the workflow rules; softened the responsibility wording so it does not prematurely assume all technicians perform every step identically.
+- **Q6 (SLA Guidelines):** Good catch—formal SLA management was not specified in the project brief. Replaced `"SLA guidelines"` with `"priority and response-time expectations"` to avoid introducing an unconfirmed formal concept.
+- **Q7 (Scope Exclusions in Stakeholder Benefits):** Removed the reference to infrastructure monitoring exclusions from the University Leadership benefit bullet so Section 3 stays strictly focused on stakeholder value and responsibilities.
+
+---
+---
+
+*Prompt*
+Review ONLY this specific section of our SupportIT Vision Document (university IT helpdesk for students and staff; out of scope: remote control, automatic diagnosis, monitoring platforms; no UI or tech choices). 
+
+Check ONLY for: ambiguous terms, unverified current-state assumptions, contradictions, or scope drift within this section's high-level purpose. 
+- Do NOT ask detailed functional requirement questions (e.g., workflows, fields, permissions, UI, or edge cases) that belong in later sections.
+- Do NOT rewrite the text. 
+- Return a maximum of 5–7 high-level clarification questions strictly relevant to this section.
+
+3.3 User Environment
+SupportIT operates within a distributed university environment serving students, staff, and IT support teams across on-campus and remote settings.
+
+- **Task Participants:** A typical request lifecycle involves at least two participants—the requester (student or staff member) and an assigned IT support technician—with potential involvement from additional specialists or an IT service supervisor when triage, reassignment, or escalation is required.
+- **Task Cycle & Workload Patterns:** Individual support interactions range from brief status updates taking a few minutes to multi-day resolution cycles for complex issues. Request volume is expected to fluctuate throughout the academic calendar, with peak demand occurring at the start of semesters, during examination periods, and following campus-wide system updates.
+- **Environmental & Access Constraints:** Students and staff access university services from diverse locations—including classrooms, laboratories, administrative offices, libraries, and off-campus residences—using both institutional workstations and personal devices (desktops, laptops, tablets, and smartphones). Requesters experiencing network or account lockouts may also require alternative access paths or assistance logging requests.
+- **Existing Ecosystem & Integration Context:** SupportIT functions alongside existing university identity and communication environments (such as institutional user directories and university email) to identify requesters and deliver status notifications. Specific platform standards, authentication protocols, and integration boundaries remain to be confirmed during architectural specification.
+
+*Answer*
+# High-Level Clarification Questions
+
+1. The section describes a **"typical distributed university environment"** and repeatedly uses terms such as **"intended," "expected," "anticipated,"** and **"potentially."** Has the team distinguished which environmental characteristics are validated assumptions versus planning assumptions that still require stakeholder confirmation?
+
+2. The statement that users operate across **both on-campus and remote settings** appears to define the target environment broadly. Is this scope based on the actual university environment being analyzed, or a generalized university scenario?
+
+3. The workload pattern assumptions (semester starts, examination periods, system updates) are presented as anticipated demand drivers. Are these based on observed institutional support trends, or are they currently unverified planning assumptions?
+
+4. The Environmental & Access Constraints section introduces **alternative intake procedures** for users affected by network or account lockouts. Is this intended to describe the operating environment, or does it begin to introduce solution-level responses to that environment?
+
+5. The Existing Ecosystem & Integration Context assumes the existence of **institutional user directories** and **university email services**. Have these dependencies been confirmed as relevant to the project context, or are they representative examples of common university infrastructure?
+
+6. The section states that SupportIT may operate either with integration or as a standalone system depending on future decisions. Does this introduce uncertainty about a key environmental dependency that should be resolved before defining the user environment?
+
+7. The references to **specialized technicians**, **service supervisors**, and possible role tiers suggest a particular organizational structure. Is that structure known to exist within the target university environment, or is it currently a working assumption about how support services are organized?
+
+# Team Decisions
+
+- **Q1–Q3 & Q5–Q7 (Validated vs. Planning Assumptions):** Because this is a greenfield specification based on a general university project brief rather than a live institutional audit, all environmental parameters (distributed campus/remote access, academic-calendar demand peaks, support tier structure, and external directory/email ecosystems) are **working planning assumptions** to be confirmed with stakeholders—not verified audit metrics. Added a clear one-sentence disclaimer at the top of 3.3 so the reader does not mistake planning assumptions for empirical facts.
+- **Q4 (Solution Creep on "Alternative Intake Procedures"):** Good catch—removed the phrase *"(such as staff-assisted ticket logging)"* so Section 3.3 describes only the environmental constraint (users locked out of accounts/networks cannot self-submit) without prescribing a solution feature prematurely.
